@@ -12,7 +12,7 @@ ESCOPOS = [
 def conectar_planilha():
     credenciais = Credentials.from_service_account_file("credenciais.json", scopes=ESCOPOS)
     cliente = gspread.authorize(credenciais)
-    return cliente.open_by_key(ID_DA_PLANILHA).get_sheet1()
+    return cliente.open_by_key(ID_DA_PLANILHA).sheet1
 
 MUNICIPIOS_ALVO = [
     "Águas Formosas", "Ataléia", "Caraí", "Crisólita", "Frei Gaspar", 
